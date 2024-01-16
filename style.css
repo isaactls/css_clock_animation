@@ -1,0 +1,129 @@
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    grid-template-rows: 30pxfr 2fr 30pxfr;
+}
+header{
+    grid-area: header;
+    background-color: black;
+}
+main{
+    grid-area: main;
+    background-color: #e6ebf2;
+    
+}
+.container{
+    position: relative;
+    background-color: #ebeff5;
+    top: 15%;
+    height: 300px;
+    width: 300px;
+    border: 15px solid #513636;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 8px 8px 46px rgb(126, 126, 126);
+}
+
+
+.hand{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 50%;
+    box-shadow: 4px 5px 8px rgb(97, 97, 97);
+}
+.center{
+    position: absolute;
+    right: 46%;
+    top: 48%;
+    border-radius: 50%;
+    border: 2px solid rgb(202, 97, 97);
+    width: 19px;
+    height: 19px;
+    background-color: rgb(10, 9, 9);
+    z-index: 2;
+}
+.minutes{
+    border: 2px solid brown;
+    width: 40%;
+    height: 4px;
+    animation: clockwise 1.5s infinite linear;
+}
+.hour{
+    z-index: 1;
+    border: 5px solid red;
+    width: 30%;
+    border-bottom: 50%;
+    animation: clockwise 15s infinite linear;
+    
+}
+@keyframes clockwise{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+}
+
+.thik{
+    position: absolute;
+    height: 20px;
+    width: 5px;
+    background-color: black;
+  }
+ 
+.twelve{
+    left: 50%;
+  }
+.twelve::before, .three::before, .six::before, .nine::before{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+  .twelve::before{
+    position: absolute;
+    content: "12";
+    top: 1rem;
+    left: -10px;
+  }
+.three{
+    transform: rotate(90deg);
+    top: 50%;
+    left: 96%;
+  }
+.three::before{
+    position: absolute;
+    content: "3";
+    transform: rotate(270deg);
+    top: 1rem;
+  }
+
+.six{
+    top: 94%;
+    left: 50%;
+  }
+  .six::before{
+    position: absolute;
+    content: "6";
+    bottom: 1rem;
+    right: 0;
+  }
+.nine{
+    transform: rotate(270deg);
+    top: 50%;
+    left: 8px;
+}
+.nine::before{
+    position: absolute;
+    content: "9";
+    transform: rotate(90deg);
+    top: 70%;
+    left: -90%;
+}
