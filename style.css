@@ -9,7 +9,7 @@ body{
     grid-template-areas: "header"
                           "main"
                           "footer";
-    grid-template-rows: 30pxfr 2fr 30pxfr;
+    grid-template-rows: 30px 2fr 30px;
 }
 header{
     grid-area: header;
